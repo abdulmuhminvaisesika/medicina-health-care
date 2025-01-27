@@ -33,3 +33,9 @@ def login_view(request):
         else:
             messages.error(request, "Invalid username or password.")
     return render(request, 'user_app/login.html')
+
+
+
+
+def home_view(request):
+    return render(request, 'home.html')

@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from user_app.views import home_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_view, name='home'),  # Set the home page route
+
     path('user/', include('user_app.urls')),
     path('cart/', include('cart_app.urls')),
     path('product/', include('product_app.urls'))
