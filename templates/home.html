@@ -8,11 +8,41 @@
 </head>
 <body class="bg-light">
     <div class="container py-5">
-        <h1 class="text-center mb-4">Welcome to the Home Page</h1>
-        <nav class="text-center">
-            <a href="{% url 'login' %}" class="btn btn-primary me-2">Login</a>
-            <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+        <!-- Header -->
+        <h1 class="text-center mb-4">Welcome to Our Platform</h1>
+
+        <!-- Navigation -->
+        <nav class="text-center mb-4">
+            <a href="{% url 'customer_login' %}" class="btn btn-outline-primary me-2">Customer Login</a>
+            <a href="{% url 'owner_login' %}" class="btn btn-outline-success me-2">Owner Login</a>
+            <a href="{% url 'register' %}" class="btn btn-outline-secondary">Register</a>
         </nav>
+
+        <!-- Content Section -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Are you a Customer?</h5>
+                        <p class="card-text">Browse products, track orders, and much more. Log in to access your account or register as a new customer.</p>
+                        <a href="{% url 'customer_login' %}" class="btn btn-primary">Customer Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Are you an Owner?</h5>
+                        <p class="card-text">Manage your store, add new products, and handle orders. Log in to access your owner dashboard or register now.</p>
+                        <a href="{% url 'owner_login' %}" class="btn btn-success">Owner Login</a>
+                    </div>
+                </div>
+            </div>z
+        </div>
     </div>
+
+    <footer class="text-center py-3">
+        <small>&copy; {{ year }} My Platform. All rights reserved.</small>
+    </footer>
 </body>
 </html>
